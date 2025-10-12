@@ -1,13 +1,13 @@
 import random
 
-def generate_initial_stock(num_lines):
-
-    categories = {'Tops': ["T-Shirt", "Blouse", "Shirt", "Sweater", "Tank Top"],
+categories = {'Tops': ["T-Shirt", "Blouse", "Shirt", "Sweater", "Tank Top"],
     'Bottoms': ["Jeans", "Trousers", "Shorts", "Skirt"],
     'Outerwear': ["Jacket", "Coat", "Hoodie", "Blazer"], 
     'Dresses': ["Dress", "Gown", "Jumpsuit"],
     'Footwear': ["Sneakers", "Boots", "Sandals", "Heels"],
     'Accessories': ["Belt", "Scarf", "Hat", "Bag", "Sunglasses"]}
+
+def generate_initial_stock(num_lines):
 
     stock_content = ''
     for _ in range(num_lines):
