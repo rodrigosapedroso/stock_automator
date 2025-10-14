@@ -1,8 +1,9 @@
 from generate_stock import categories
 import random
 
+sales_title = 'item_name, category, sales\n'
+
 def generate_sales(num_lines):
-    sales_title = 'item_name, category, sales\n'
     sales_table = ''
     for _ in range(num_lines):
         category = random.choice(list(categories.keys()))
@@ -59,6 +60,30 @@ total_sales = sum_sales(sales_table)
 print(total_sales)
 total_stock = sum_stock(stock_table)
 print(total_stock)
+
+def fix_sales(total_sales, total_stock):
+    
+    new_total_sales = {}
+    for nsales, qsales in total_sales.items():
+        for nstock, qstock in total_stock.items():
+            if nstock == nsales:
+                if int(qstock) < int(qsales):
+                    new_total_sales[nsales] = qstock
+                else:
+                    new_total_sales[nsales] = qsales
+    
+    sales_table = ''
+    for n, q in new_total_sales.items():
+        for cat, l in categories.items():
+            if n in l:
+                category = cat
+
+        sales_table += f'{n}, {category}, {q}\n'
+
+    return sales_title + sales_table
+
+sales_table = fix_sales(total_sales, total_stock)
+print(sales_table)
 
 file_sales = open('data/sales.csv', 'w')
 file_sales.write(sales_table)
