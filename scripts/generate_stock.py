@@ -49,11 +49,11 @@ def resume_stock(table):
                 category = cat
                 break
         if category == 'Tops' or category == 'Bottoms':
-            min_stock = 5
+            min_stock = 10
         elif category == 'Outerwear' or category == 'Dresses':
-            min_stock = 3
+            min_stock = 8
         elif category == 'Footwear' or category == 'Accessories':
-            min_stock = 2
+            min_stock = 6
 
         stock_content += f'{n}, {category}, {q}, {min_stock}\n'
 
