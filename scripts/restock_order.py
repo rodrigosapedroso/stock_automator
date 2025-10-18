@@ -44,12 +44,17 @@ def new_stock(stock, sales):
     table = title + content
     return table
 
-restock = new_stock(init_stock, sales)
-print(restock)
+def show_restock():
 
-file_restock = open('data/restock.csv', 'w')
-file_restock.write(restock)
-file_restock.close()
+    restock = new_stock(init_stock, sales)
+    print(restock)
+
+    file_restock = open('data/restock.csv', 'w')
+    file_restock.write(restock)
+    file_restock.close()
+
+if __name__ == '__main__':
+    show_restock()
 
 
     

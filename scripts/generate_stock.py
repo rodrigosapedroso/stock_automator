@@ -60,11 +60,15 @@ def resume_stock(table):
     table = stock_title + stock_content
     return table
 
-if __name__ == '__main__':
-    raw_table = create_stock(100)
+def show_stock(num_lines):
+    
+    raw_table = create_stock(num_lines)
     stock_table = resume_stock(raw_table)
     print(stock_table)
 
     file = open('data/stock.csv', 'w')
     file.write(stock_table)
     file.close()
+
+if __name__ == '__main__':
+    show_stock(100)

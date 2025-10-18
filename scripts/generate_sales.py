@@ -58,13 +58,18 @@ def fix_sales(sales, stock):
     table = sales_title + sales_content
     return table
 
-raw_table = create_sales(100)
-file_stock = open('data/stock.csv', 'r')
-stock_table = file_stock.read()
-file_stock.close()
-sales_table = fix_sales(raw_table, stock_table)
-print(sales_table)
+def show_sales(num_lines):
+    
+    raw_table = create_sales(num_lines)
+    file_stock = open('data/stock.csv', 'r')
+    stock_table = file_stock.read()
+    file_stock.close()
+    sales_table = fix_sales(raw_table, stock_table)
+    print(sales_table)
 
-file_sales = open('data/sales.csv', 'w')
-file_sales.write(sales_table)
-file_sales.close()
+    file_sales = open('data/sales.csv', 'w')
+    file_sales.write(sales_table)
+    file_sales.close()
+
+if __name__ == '__main__':
+    show_sales(100)
