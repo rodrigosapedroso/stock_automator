@@ -1,14 +1,15 @@
 item_name, category, restock
-Dress, Dresses, 13
-Bag, Accessories, 12
-Hoodie, Outerwear, 16
-Trousers, Bottoms, 20
+Jumpsuit, Dresses, 12
+Blouse, Tops, 20
+Scarf, Accessories, 12
 Gown, Dresses, 16
-Coat, Outerwear, 16
-Skirt, Bottoms, 20
-Jacket, Outerwear, 16
-Heels, Footwear, 12
-T-Shirt, Tops, 20
+Skirt, Bottoms, 15
 Blazer, Outerwear, 16
-Tank Top, Tops, 20
+Trousers, Bottoms, 10
+Jacket, Outerwear, 11
+Sweater, Tops, 20
+Sandals, Footwear, 10
+Sneakers, Footwear, 12
+Coat, Outerwear, 16
 Sunglasses, Accessories, 12
+Boots, Footwear, 12
