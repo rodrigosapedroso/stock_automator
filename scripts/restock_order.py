@@ -47,6 +47,10 @@ def new_stock(stock, sales):
 restock = new_stock(init_stock, sales)
 print(restock)
 
+file_restock = open('data/restock.csv', 'w')
+file_restock.write(restock)
+file_restock.close()
+
 
     
     
