@@ -59,13 +59,14 @@ def fix_sales(sales, stock):
     return table
 
 def show_sales(num_lines):
-    
+
+    title = '\nWEEKLY SALES\n\n'
     raw_table = create_sales(num_lines)
     file_stock = open('data/stock.csv', 'r')
     stock_table = file_stock.read()
     file_stock.close()
     sales_table = fix_sales(raw_table, stock_table)
-    print(sales_table)
+    print(title + sales_table)
 
     file_sales = open('data/sales.csv', 'w')
     file_sales.write(sales_table)
