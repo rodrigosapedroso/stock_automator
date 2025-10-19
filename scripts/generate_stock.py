@@ -61,10 +61,11 @@ def resume_stock(table):
     return table
 
 def show_stock(num_lines):
-    
+
+    title = '\nSTOCK\n\n'
     raw_table = create_stock(num_lines)
     stock_table = resume_stock(raw_table)
-    print(stock_table)
+    print(title + stock_table)
 
     file = open('data/stock.csv', 'w')
     file.write(stock_table)
