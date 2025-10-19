@@ -72,5 +72,7 @@ def show_sales(num_lines):
     file_sales.write(sales_table)
     file_sales.close()
 
+    return sales_table
+
 if __name__ == '__main__':
     show_sales(100)

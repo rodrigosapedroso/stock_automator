@@ -71,5 +71,7 @@ def show_stock(num_lines):
     file.write(stock_table)
     file.close()
 
+    return stock_table
+
 if __name__ == '__main__':
     show_stock(100)
