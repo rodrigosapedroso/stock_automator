@@ -27,6 +27,7 @@ def new_stock(stock, sales):
         sales_dict[sales_name] = sales_quant
 
     content = ''
+    alert = False
     for nstock, qstock in stock_dict.items():
         for nsales, qsales in sales_dict.items():
             if nstock == nsales:
@@ -40,18 +41,25 @@ def new_stock(stock, sales):
                 if available <= min_stock:
                     restock = 2*min_stock - available
                     content += f'{nstock}, {category}, {restock}\n'
+                    alert = True
    
     table = title + content
-    return table
+    return table, alert
 
 def show_restock():
 
-    restock = new_stock(init_stock, sales)
-    print(restock)
+    restock, alert = new_stock(init_stock, sales)
 
     file_restock = open('data/restock.csv', 'w')
     file_restock.write(restock)
     file_restock.close()
+
+    if alert:
+        print('ALERT: New inventory to be restored!\n')
+    else:
+        print('No stock needed this week.\n')
+
+    print(restock)
 
 if __name__ == '__main__':
     show_restock()
