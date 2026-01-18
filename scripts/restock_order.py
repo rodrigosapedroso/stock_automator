@@ -74,6 +74,3 @@ def show_restock(init_stock, sales):
     file_restock.close()
 
     return restock
-
-if __name__ == '__main__':
-    show_restock(init_stock, sales)

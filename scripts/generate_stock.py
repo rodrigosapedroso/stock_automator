@@ -1,11 +1,13 @@
 import random
 
-categories = {'Tops': ["T-Shirt", "Blouse", "Shirt", "Sweater", "Tank Top"],
+categories = {
+    'Tops': ["T-Shirt", "Blouse", "Shirt", "Sweater", "Tank Top"],
     'Bottoms': ["Jeans", "Trousers", "Shorts", "Skirt"],
     'Outerwear': ["Jacket", "Coat", "Hoodie", "Blazer"], 
     'Dresses': ["Dress", "Gown", "Jumpsuit"],
     'Footwear': ["Sneakers", "Boots", "Sandals", "Heels"],
-    'Accessories': ["Belt", "Scarf", "Hat", "Bag", "Sunglasses"]}
+    'Accessories': ["Belt", "Scarf", "Hat", "Bag", "Sunglasses"]
+}
 
 stock_title = 'item_name, category, stock, min_stock\n'
 
